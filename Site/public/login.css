@@ -1,0 +1,84 @@
+body{
+    background-color: #243C39;
+}
+.container-login{
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: white;
+    display: flex;
+     box-shadow: 10px 10px 8px black;
+     /* box-shadow: 0 0 25px white; */
+
+
+}
+
+.container-right{
+    width: 65%;
+    height: 80vh;
+   text-align: end;
+    align-items: end;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container-right img{
+    width: 100%; /* A imagem ocupa toda a largura da div */
+    height: 100%; /* A imagem ocupa toda a altura da div */
+    object-fit: fill; 
+}
+
+.container-left{
+    width: 35%;
+    height: 80vh;
+    margin-left: 10%;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#img-login{
+    width: 60%;
+}
+.container-right p{
+    font-size: 25px;
+}
+.container-right h1{
+    font-size: 55px;
+}
+
+#img-user-login{
+    width: 70px;
+    align-self: center;
+}
+
+.input-login{
+    width: 250px;
+    align-self: center;
+    border: none;
+    border-bottom: 2px solid #243C39;
+    text-align: center;
+}
+
+.botao-login{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    background-color: #243C39;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+    border: 1px solid white;
+    box-shadow: 5px 5px 4px black;
+}
+
+.container-left label,a,p{
+    font-size: 20px;
+}
+
+.container-left a{
+    color: #243C39;
+}
