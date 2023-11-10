@@ -20,6 +20,9 @@ body{
     color: white;
     font-weight:bolder;
     text-transform: uppercase;
+    position: relative;
+    text-decoration: overline;
+
 }
 
 
@@ -69,3 +72,83 @@ body{
 }
 
 /*  fim navbar */
+
+
+.banner{
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    gap: 50px;
+}
+
+#img-bemVindo{
+    width: 620px;
+}
+
+
+.botao-home{
+    background-color: #243C39;
+    color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    box-shadow:0px 5px  white;
+}
+
+hr{
+    width: 99%;
+}
+ .navegacao-sobre{
+    background-color: #243C39;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight:bolder;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: overline;
+ }
+
+ .navSobre{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+ }
+
+ .container-sobre{
+    width: 80%;
+    margin:0 auto;
+    color: white;
+ }
+
+#videoTrailer{
+    margin-left: 25%;
+}
+.sobreMim{
+    display: flex;
+    gap: 55px;
+}
+
+.sobreMim img{
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid #243C39;
+}
+
+#icons-sobre{
+    font-size: 2.5rem;
+}
+
+.img-redes{
+    text-align: center;
+}
