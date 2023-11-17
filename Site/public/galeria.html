@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+    <script src="https://kit.fontawesome.com/f0ba5f04ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="assets/images/logo.png" id="img-logo" alt="">
+
+        </div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Quiz</a></li>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="galeria.html" id="aqui">Galeria</a></li>
+        </ul>
+
+        <div class="login-cadastro">
+            <a href="login.html">LOGIN</a>
+            <a href="cadastro.html">CADASTRO</a>
+        </div>
+
+    </div>
+
+    <div class="container-galeria">
+        <div>
+            <h1>Bem vindo a galeria de imagens para fãs de Blindspot</h1>
+            <h2>Clique no botão abaixo e sortei uma imagem</h2>
+            <button onclick="sortearImagem()">Sortear</button>
+        </div>
+        <div>
+            <span id="resultadoImg"> <img src="assets/images/img-home.png" alt=""></span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="script.js"></script>

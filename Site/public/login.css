@@ -1,117 +1,102 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap'); */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: 'poppins', sans-serif; */
-}
-
+/* Configurações gerais para o corpo da página */
 body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0; /* Remove as margens padrão */
+  padding: 0; /* Remove o preenchimento padrão */
+  display: flex; /* Usa o modelo de layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
+  background: linear-gradient(to bottom, #181818, #393939, rgb(90, 82, 82)); /* Cria um fundo gradiente */
 }
 
-.container {
-  background-color: whitesmoke;
-  padding: 6px;
-  width: 350px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 darkgrey;
+/* Estilos para a div principal que envolve todo o conteúdo */
+.main {
+  width: 350px; /* Largura da div principal */
+  height: 500px; /* Altura da div principal */
+  background: #243C39; /* Cor de fundo da div principal */
+  overflow: hidden; /* Oculta o conteúdo que transborda */
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: 5px 20px 50px #000; /* Sombra da caixa */
 }
 
-form {
-  position: absolute;
-  margin-top: 80px;
-  transition: .5s;
-  width: 300px;
-  height: 400px;
+/* Esconde a caixa de seleção (checkbox) */
+#chk {
+  display: none; /* Oculta a caixa de seleção */
 }
 
-.buttonsForm {
-  margin-top: 40px;
-  position: relative;
-  border-radius: 30px;
-  box-shadow: 0 0 7px 0 #798d81;
+/* Estilos para a área de cadastro */
+.signup {
+  position: relative; /* Posicionamento relativo para rótulos absolutos */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
 }
 
-.buttonsForm button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  position: relative;
-  padding: 10px 20px;
+/* Estilos para rótulos (labels) */
+label {
+  color: #fff; /* Cor do texto branco */
+  font-size: 2.3em; /* Tamanho da fonte */
+  justify-content: center; /* Centraliza horizontalmente */
+  display: flex; /* Usa o modelo de layout flexível */
+  margin: 60px; /* Margem externa */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Mostra o cursor ao passar por cima */
+  transition: .5s ease-in-out; /* Efeito de transição suave */
 }
 
-.btnColor {
-  position: absolute;
-  width: 108px;
-  height: 100%;
-  background: linear-gradient(to right, #243C39, #798d81);
-  color: white;
-  border-radius: 30px;
-  transition: .3s;
+/* Estilos para campos de entrada */
+input {
+  width: 60%; /* Largura do campo de entrada */
+  height: 20px; /* Altura do campo de entrada */
+  background: #e0dede; /* Cor de fundo do campo de entrada */
+  justify-content: center; /* Centraliza horizontalmente */
+  display: flex; /* Usa o modelo de layout flexível */
+  margin: 20px auto; /* Margem interna superior e inferior, centraliza verticalmente */
+  padding: 10px; /* Preenchimento interno */
+  border: none; /* Remove a borda */
+  outline: none; /* Remove a borda do foco */
+  border-radius: 5px; /* Borda arredondada */
 }
 
-input[type="text"], input[type="password"] {
-  border: none;
-  margin-top: 40px;
-  border-radius: 60px;
-  padding: 8px 0 8px 35px;
-  outline: none;
-  width: 100%;
+/* Estilos para botões */
+button {
+  width: 60%; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  margin: 10px auto; /* Margem interna superior e inferior, centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  display: block; /* Exibe como bloco */
+  color: #fff; /* Cor do texto branco */
+  background: #243C39; /* Cor de fundo do botão */
+  font-size: 1em; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  margin-top: 20px; /* Margem superior */
+  outline: none; /* Remove a borda do foco */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Borda arredondada */
+  transition: .2s ease-in; /* Efeito de transição suave */
+  cursor: pointer; /* Mostra o cursor ao passar por cima */
 }
 
-button[type="submit"] {
-  background: #243C39;
-  color: white;
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0 8px 15px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
+/* Efeito de hover para botões */
+button:hover {
+  background: #37534f; /* Cor de fundo alterada no hover */
 }
 
-.divCheck {
-  margin: 10px 0 0 5px;
-  width: 80%;
-  font-size: 13px;
+/* Estilos para a área de login */
+.login {
+  height: 460px; /* Altura da área de login */
+  background: #eee; /* Cor de fundo da área de login */
+  border-radius: 60% / 10%; /* Borda arredondada */
+  transform: translateY(-180px); /* Translação vertical para esconder a área de login */
+  transition: .8s ease-in-out; /* Efeito de transição suave */
 }
 
-#signin {
-  left: 25px;
+/* Estilos para rótulos (labels) na área de login */
+.login label {
+  color: #243C39; /* Cor do texto na área de login */
+  transform: scale(.6); /* Reduz o tamanho do rótulo */
 }
 
-#signup {
-  left: 450px;
-}
-
-i {
-  position: absolute;
-  left: 0;
-  padding: 10px 10px;
-}
-
-.iEmail {
-  top: 40px;
-}
-
-.iPassword {
-  top: 114px;
-}
-
-.iPassword2 {
-  top: 190px;
+/* Transição para esconder a área de login quando a caixa de seleção está marcada */
+#chk:checked ~ .login {
+  transform: translateY(-500px); /* Translação vertical para esconder a área de login quando a caixa de seleção está marcada */
 }
