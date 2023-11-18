@@ -5,6 +5,7 @@
     text-align: start;
     align-items: center;
     position: relative;
+    color: white;
 }
 .container-galeria button{
     background-color: #243C39;
