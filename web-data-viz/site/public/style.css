@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #393939;
+}
+
+/* inicio navbar */
+.header{
+    background-color: #243C39;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight:bolder;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: overline;
+    box-shadow:
+    0 8px  8px  rgba(0, 0, 0, 0.478), 
+    0 16px 16px rgba(64, 64, 64, 0.1), 
+    8px 32px 32px rgba(0, 0, 0, .15), 
+    8px 64px 64px rgba(255, 255, 255, 0.173);
+
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+#img-logo{
+    width: 150px;
+    height: 100px;
+}
+
+
+.navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.login-cadastro{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+.login-cadastro a{
+    text-decoration: none;
+    color: white;
+}
+
+#aqui{
+    background-color:#BE9674;
+    color: #243C39;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow:0px 5px  white;
+    cursor: pointer;
+}
+
+/*  fim navbar */
+
+
+.banner{
+    width: 100%;
+    background: linear-gradient(transparent 5%, #151616  95%), url('assets/images/695301.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    margin:0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 83vh;
+}
+
+.container-texto{
+    width: 40%;
+    margin-left: 10%;
+    color: black;
+    font-size: 20px;
+    
+}
+
+#img-bemVindo{
+    width: 620px;
+}
+
+
+.botao-home{
+    background-color: #243C39;
+    color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    box-shadow:0px 5px  white;
+}
+.bota-home
+
+
+hr{
+    width: 99%;
+}
+ .navegacao-sobre{
+    background-color: #243C39;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight:bolder;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: overline;
+ }
+
+ .navSobre{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+ }
+
+ .container-sobre{
+    width: 80%;
+    margin:0 auto;
+    color: white;
+ }
+
+ .botao-sobre{
+    background-color: #243C39;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    border: none;
+    box-shadow:0px 5px  white;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+#videoTrailer{
+    margin: 0 auto;
+    display: flex;
+}
+.sobreMim{
+    display: flex;
+    gap: 55px;
+}
+
+.sobreMim img{
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid #243C39;
+}
+
+#icons-sobre{
+    font-size: 2.5rem;
+}
+
+.img-redes{
+    text-align: center;
+}
+
+
+/* footer */
+
+.footer{
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    height: 100px;
+    background-image: linear-gradient(to top, black 30%, transparent);
+}

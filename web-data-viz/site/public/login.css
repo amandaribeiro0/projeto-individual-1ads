@@ -15,6 +15,7 @@ body {
 /* Estilos para a div principal que envolve todo o conteúdo */
 .main {
   display: flex;
+  flex-direction: column;
   backdrop-filter: blur(500px); 
   width: 25vw; /* Largura da div principal */
   height: 500px; /* Altura da div principal */

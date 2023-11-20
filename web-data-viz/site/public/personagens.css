@@ -1,0 +1,26 @@
+.main{
+    width: 80%;
+    margin:0 auto;
+    color: white;
+}
+.container-cards{
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    width: 250px;
+    background-color: #243C39;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow:5px 5px 3px  white;
+}
+
+.card img{
+    width: 230px;
+    height: 230px;
+    /* margin: 0 auto;
+    display: flex; */
+}
