@@ -18,7 +18,18 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
+CREATE TABLE formulario(
+	idForm INT,
+    personagemFav VARCHAR(30),
+    temporadaFav VARCHAR(30),
+    reviravolta VARCHAR(150),
+    notaSerie INT,
+    fkUsuario INT,
+    constraint fk_User_Form foreign key (fkUsuario) references usuario(id),
+    primary key(idForm, fkUsuario)
+);
 
 
-
-
+select * from formulario;
+select * from usuario ORDER BY id DESC;
+SELECT * FROM usuario JOIN formulario ON id = idForm;

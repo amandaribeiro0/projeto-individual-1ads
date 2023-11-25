@@ -7,6 +7,7 @@ function cadastrar(req, res) {
     var temporadaFav = req.body.temporadaFavServer;
     var reviravolta = req.body.reviravoltaServer;
     var notaSerie = req.body.notaSerieServer;
+    var idUsuario = req.body.idUsuarioServer;
 
     if (personagemFav == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -19,7 +20,7 @@ function cadastrar(req, res) {
     }else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        formularioModel.cadastrar(personagemFav, temporadaFav, reviravolta,notaSerie)
+        formularioModel.cadastrar(personagemFav, temporadaFav, reviravolta,notaSerie, idUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -31,7 +32,11 @@ function cadastrar(req, res) {
                         "\nHouve um erro ao realizar o cadastro! Erro: ",
                         erro.sqlMessage
                     );
-                    res.status(500).json(erro.sqlMessage);
+                    if(erro.sqlMessage == `Duplicate entry '${idUsuario}-${idUsuario}' for key 'formulario.PRIMARY'`) {
+                        res.status(401).json(erro.sqlMessage);
+                    }else{
+                        res.status(500).json(erro.sqlMessage);
+                    }
                 }
             );
     }
