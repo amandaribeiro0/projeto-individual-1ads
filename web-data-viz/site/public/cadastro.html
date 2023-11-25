@@ -23,14 +23,14 @@
   <div class="main">
 
 
-    <form>
+    <div class="formulario">
       <h1>CADASTRO</h1>
       <input type="text" placeholder="Nome" id="nome_input">
       <input type="email" placeholder="Email" id="email_input">
       <input type="password" placeholder="Senha" id="senha_input">
       <input type="password" placeholder="Confirmar Senha" id="confirmacao_senha_input" required="">
       <button onclick="cadastrar()">CADASTRAR</button>
-    </form>
+    </div>
 
 
   </div>
@@ -40,7 +40,7 @@
 
 <script>
   function cadastrar() {
-    aguardar();
+    // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -56,10 +56,9 @@
       confirmacaoSenhaVar == ""
     ) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      alert ('Mensagem de erro para todos os campos em branco');
 
-      finalizarAguardar();
+      // finalizarAguardar();
       return false;
     } else {
       setInterval(sumirMensagem, 5000);
@@ -111,7 +110,7 @@
             window.location = "login.html";
           }, 1000); // apenas para exibir o loading
           limparFormulario();
-          finalizarAguardar();
+          // finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }

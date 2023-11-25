@@ -11,6 +11,7 @@ body {
   /* background: linear-gradient(to bottom, #181818, #393939, rgb(90, 82, 82)); Cria um fundo gradiente */
   background: linear-gradient(rgba(85, 85, 85, 0.467) 5%, #2f2f2f  95%), url('assets/images/fundo-login.jpeg');
 }
+/* 
 
 /* Estilos para a div principal que envolve todo o conteúdo */
 .main {
@@ -18,7 +19,7 @@ body {
   flex-direction: column;
   backdrop-filter: blur(500px); 
   width: 25vw; /* Largura da div principal */
-  height: 500px; /* Altura da div principal */
+  height: 520px; /* Altura da div principal */
   background: rgba(53, 89, 85, 0.477); /* Cor de fundo da div principal */
   align-items: center;
   justify-content: center;

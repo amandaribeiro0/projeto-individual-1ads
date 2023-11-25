@@ -1,0 +1,53 @@
+.container-principal{
+    display: flex;
+    color: white;
+}
+
+.sidebar{
+    height: 100vh;
+    background: linear-gradient(to bottom, #243C39, #335753);
+    width: 15%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    font-size: 20px;
+}
+.sidebar button{
+    font-size: 20px;
+    text-align: center;
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+.botao-sidebar{
+    background-color:#172826;
+    /* color: #243C39; */
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow:0px 5px  white;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.pergunta{
+    background-color: #35545137;
+    border-radius: 18px;
+    font-size: 20px;
+    width: 65vw;
+    height: 100px;
+    text-align: start;
+    padding: 8px;
+}

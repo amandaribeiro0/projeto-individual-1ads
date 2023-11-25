@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+    <div class="container-principal">
+        <div class="sidebar">
+            <img width="200px" src="assets/images/logo.png" alt="">
+            <a class="botao-sidebar" href="index.html">
+                <lord-icon src="https://cdn.lordicon.com/wmwqvixz.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon>
+                HOME</a>
+
+            <a href="" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/ojnjgkun.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> QUIZ </a>
+
+            <a href="" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/xpgofwru.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> FORMULARIO</a>
+
+            <button class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/zxvuvcnc.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> SAIR
+            </button>
+        </div>
+
+        <div>
+            <div>
+                <h1>Olá! <br> Responda nosso formulario para sabermos um pouco mais sobre você</h1>
+                <div class="formulario">
+                    <div  class="pergunta">
+                        <p>Qual seu personagem favorito?</p>
+                        <select id="id_personagemFav">
+                            <option value="Jane Doe">Jane Doe</option>
+                            <option value="Kurt Weller">Kurt Weller</option>
+                            <option value="Patterson ">Patterson</option>
+                            <option value="Tasha Zapata">Tasha Zapata</option>
+                            <option value="Edgar Reade">Edgar Reade</option>
+                            <option value="Rich Dotcom">Rich Dotcom</option>
+                            <option value="Roman">Roman</option>
+                            <option value="Mayfair">Mayfair</option>
+                            <option value="Outros">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="pergunta">
+                        <p>Qual sua temporada favorita?</p>
+                        <select id="id_temporadaFav">
+                            <option value="1º">Primeira temporada</option>
+                            <option value="2º">Segunda temporada</option>
+                            <option value="3º">Terceira temporada</option>
+                            <option value="4º">Quarta temporada</option>
+                            <option value="5º">Quinta temporada</option>
+                        </select>
+                    </div>
+
+                    <div class="pergunta">
+                        <p>Qual foi a reviravolta mais surpreendente ou inesperada que você viu na série?</p>
+                        <select id="id_reviravolta">
+                            <option value="Revelação que Jane era Remi">A revelação de que Jane Doe era na verdade Remi</option>
+                            <option value="Shepherd mãe da Jane">O momento em que Shepherd, a vilã, foi revelada como a mãe de Jane.</option>
+                            <option value="Tattos foram feitas por Jane">A revelação de que as tatuagens foram feitas por Jane a pedido próprio.</option>
+                            <option value="Reade agente duplo">O momento em que Reade foi exposto como um agente duplo</option>
+                            <option value="Outros">Outro</option>
+                        </select>
+
+                    </div>
+
+                    <div class="pergunta">
+                        <p>De 0 a 5, qual sua nota para a série</p>
+                        <select id="id_notaSerie">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <button class="botao-sidebar" onclick="cadastrarFormulario()">ENVIAR RESPOSTAS</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    function cadastrarFormulario() {
+      // aguardar();
+  
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var personagemFav = id_personagemFav.value;
+      var temporadaFav = id_temporadaFav.value;
+      var reviravolta = id_reviravolta.value;
+      var notaSerie = Number(id_notaSerie.value);
+  
+      if (
+        personagemFav == "" ||
+        temporadaFav == "" ||
+        reviravolta == "" ||
+        notaSerie == ""
+      ) {
+        // finalizarAguardar();
+        return false;
+      } 
+      // else {
+      //   setInterval(sumirMensagem, 5000);
+      // }
+
+      // Enviando o valor da nova input
+      fetch("/formulario/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          personagemFavServer: personagemFav,
+          temporadaFavServer: temporadaFav,
+          reviravoltaServer: reviravolta,
+          notaSerieServer: notaSerie
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+         
+            setTimeout(function () {
+              window.location = "index.html";
+            }, 1000); 
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+  
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          // finalizarAguardar();
+        });
+  
+      return false;
+    }
+  
+  
+  
+  </script>

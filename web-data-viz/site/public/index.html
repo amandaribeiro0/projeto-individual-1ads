@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="https://kit.fontawesome.com/f0ba5f04ed.js" crossorigin="anonymous"></script>
 </head>
@@ -20,7 +21,7 @@
         <ul class="navbar">
             <li><a href="index.html" id="aqui">Home</a></li>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="">Quiz</a></li>
+            <li><a href="formulario.html">Quiz</a></li>
             <li><a href="">Dashboard</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="galeria.html">Galeria</a></li>
@@ -34,7 +35,7 @@
     </div>
     <div class="banner">
         <div class="container-texto">
-            <h1>Bem-vindo ao mundo de Blindspot!</h1>
+            <h1 class="headline">Bem-vindo ao mundo de Blindspot!</h1>
             <p> Explore mistérios, ação e enigmas conosco enquanto desvendamos as tatuagens e segredos da série. Vamos
                 embarcar nesta emocionante jornada juntos!</p>
             <!-- <div class="container-botoes">
@@ -58,9 +59,9 @@
         </ul>
     </div>
 
-    <div class="container-sobre" id="id_sobre">
+    <div class="container-sobre " id="id_sobre">
         <h1>SOBRE A SÉRIE</h1>
-        <p>"Blindspot" é uma série de televisão repleta de ação, mistério e reviravoltas que cativou audiências em todo
+        <p class="headline">"Blindspot" é uma série de televisão repleta de ação, mistério e reviravoltas que cativou audiências em todo
             o mundo. A trama gira em torno de uma mulher misteriosa chamada Jane Doe, que é encontrada em plena Times
             Square, coberta de tatuagens intricadas e sem nenhuma memória de seu passado. Cada tatuagem em seu corpo
             contém pistas para crimes e conspirações que a equipe de investigação, liderada por Kurt Weller, precisa
@@ -133,7 +134,8 @@
         <div>
             <a href="https://github.com/amandaribeiro1" target="_blank"> <i id="icons-sobre"
                     class="fa-brands fa-github fa-xl" style="color: white;"></i></a>
-            <a href="https://www.linkedin.com/in/amanda--costa/"><i id="icons-sobre" class="fa-brands fa-linkedin fa-xl" style="color: white;"></i></a>
+            <a href="https://www.linkedin.com/in/amanda--costa/"><i id="icons-sobre" class="fa-brands fa-linkedin fa-xl"
+                    style="color: white;"></i></a>
         </div>
         <div>
             <p> Desenvolvido por Amanda Ribeiro &copy</p>
@@ -244,7 +246,9 @@
                 <a href="https://www.linkedin.com/in/amanda--costa/"><i id="icons-sobre" class="fa-brands fa-linkedin fa-xl" style="color: #3d5854;"></i></a>
 
             </div>
-        </div>
-`
+        </div>`
+
+        ScrollReveal().reveal('.headline');
+
     }
 </script>
