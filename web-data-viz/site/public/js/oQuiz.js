@@ -100,10 +100,68 @@ const perguntasBlindspot = [
       carregarPergunta();
     } else {
       mostrarResultadoFinal();
+      cadastrarQuiz();
     }
   }
 
   function mostrarResultadoFinal() {
     const containerQuiz = document.getElementById('quiz-container');
     containerQuiz.innerHTML = `<p class="result">Você terminou o quiz! Sua pontuação final: ${pontuacao} de ${perguntasBlindspot.length}</p>`;
+  }
+
+  
+  function cadastrarQuiz() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var pontuacaoFinal = pontuacao;
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    if (idUsuario == undefined) {
+      alert(`É necessario fazer login`)
+    }
+    if (
+      pontuacaoFinal == ""
+    ) {
+      // finalizarAguardar();
+      return false;
+    }
+    // else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/quiz/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        qtdAcertosServer: pontuacaoFinal,
+        idUsuarioServer: idUsuario
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+
+          setTimeout(function () {
+            window.location = "index.html";
+          }, 1000);
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+
+       
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
   }

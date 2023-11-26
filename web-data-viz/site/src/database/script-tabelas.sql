@@ -1,15 +1,5 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
-
 CREATE DATABASE projetoIndividual;
-
 USE projetoIndividual;
-
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -29,7 +19,16 @@ CREATE TABLE formulario(
     primary key(idForm, fkUsuario)
 );
 
+CREATE TABLE respostaQuiz(
+	idRespostaQuiz INT AUTO_INCREMENT PRIMARY KEY,
+    qtdAcertos INT,
+    fkUsuario INT,
+    constraint fk_User_Quiz foreign key (fkUsuario) references usuario(id)
+);
 
+select * from respostaQuiz;
 select * from formulario;
 select * from usuario ORDER BY id DESC;
+
+SELECT * FROM usuario JOIN respostaQuiz ON id = fkUsuario;
 SELECT * FROM usuario JOIN formulario ON id = idForm;
