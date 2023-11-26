@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="js/sessao.js"></script>
+</head>
+
+<body onload="buscarDados()">
+    <div class="container-principal">
+        <div class="sidebar">
+            <img width="200px" src="assets/images/logo.png" alt="">
+            <a class="botao-sidebar" href="index.html">
+                <lord-icon src="https://cdn.lordicon.com/wmwqvixz.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon>
+                HOME</a>
+
+            <a href="quiz.html" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/ojnjgkun.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> QUIZ </a>
+
+            <a href="formulario.html" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/xpgofwru.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> FORMULARIO</a>
+
+            <button onclick="limparSessao()" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/zxvuvcnc.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> SAIR
+            </button>
+        </div>
+
+        <div class="container-dash">
+            <div class="container-kpis">
+                <div class="card-kpi">
+                    <lord-icon src="https://cdn.lordicon.com/abwrkdvl.json" trigger="hover" stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff" style="width:250px;height:50px">
+                    </lord-icon><br>
+                    <span> Nota média para Blindspot</span><br>
+                    <span id="id_notaMedia">0</span> <span>/5</span>
+                </div>
+
+                <div class="card-kpi">
+                    <lord-icon src="https://cdn.lordicon.com/wzaldqbv.json" trigger="hover" stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff" style="width:250px;height:50px">
+                    </lord-icon><br>
+                    <span>Média de acertos no quiz</span><br>
+                    <span id="id_mediaQuiz">0</span> <span>/10</span>
+                </div>
+
+                <div class="card-kpi">
+                    <lord-icon src="https://cdn.lordicon.com/bgebyztw.json" trigger="hover" stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff" style="width:250px;height:50px">
+                    </lord-icon><br>
+                    <span>Fãs de Blindspot cadastrados</span><br>
+                    <span id="id_usersCadastrados">0</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script src="js/dash.js"></script>

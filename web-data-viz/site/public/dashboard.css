@@ -1,0 +1,25 @@
+.container-dash{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.container-kpis{
+    display: flex;
+    gap: 35px;
+}
+
+.card-kpi{
+    background-color: #2d5651d0;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid white;
+    box-shadow:
+    0 8px  8px  rgba(0, 0, 0, 0.478), 
+    0 16px 16px rgba(64, 64, 64, 0.1), 
+    8px 12px 12px rgba(0, 0, 0, .15), 
+    8px 14px 14px rgba(255, 255, 255, 0.173);
+}
