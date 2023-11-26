@@ -1,0 +1,32 @@
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .question {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: center;
+  }
+
+  .option {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .option.selected {
+    background-color: #085f0b; /* Cor de destaque */
+    color: #fff; /* Cor do texto */
+  }
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
