@@ -41,7 +41,7 @@ function buscarTemporadas(req, res) {
     dashboardModel.buscarTemporadas().then((respostaTemporada) => {
         console.log(respostaTemporada)
         res.json({
-            temporadas: respostaTemporada[0].qtdTemporada
+            temporadas: respostaTemporada
         })
 
     }).catch(

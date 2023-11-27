@@ -11,6 +11,11 @@ var personagem6 = 0
 var personagem7 = 0
 var personagem8 = 0
 
+var temporada1 = 0
+var temporada2 = 0
+var temporada3 = 0
+var temporada4 = 0
+var temporada5 = 0
 
 function buscarDados() {
     fetch("/dashboard/buscarDados", {
@@ -82,6 +87,49 @@ function buscarPersonagens() {
     return false;
 }
 buscarPersonagens()
+
+
+function buscarTemporadas() {
+    fetch("/dashboard/buscarTemporadas", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            
+        })
+    }).then(function (resposta) {
+        if (resposta.ok) {
+            console.log(resposta);
+            resposta.json().then(json => {
+                console.log(json)
+                
+
+                temporada1 = json.temporadas[0]
+                temporada2 = json.temporadas[1]
+                temporada3 = json.temporadas[2]
+                temporada4 = json.temporadas[3]
+                temporada5 = json.temporadas[4]
+
+                setTimeout(()=> {
+                    plotarGrafico()
+
+                }, 10)
+            })
+        } else {
+            console.log("Houve um erro ao tentar realizar coletar os dados!");
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+    return false;
+}
+buscarTemporadas();
+
+
 function plotarGrafico(){
     
   const ctx = document.getElementById('chartTemporadas');
@@ -89,10 +137,18 @@ function plotarGrafico(){
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['1º', '2º', '3º', '4º', '5º'],
+      labels: [temporada1.temporadaFav, 
+        temporada2.temporadaFav, 
+        temporada3.temporadaFav, 
+        temporada4.temporadaFav, 
+        temporada5.temporadaFav],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [temporada1.qtdTemporada, 
+            temporada2.qtdTemporada, 
+            temporada3.qtdTemporada, 
+            temporada4.qtdTemporada,
+            temporada5.qtdTemporada],
         borderWidth: 1
       }]
     },
