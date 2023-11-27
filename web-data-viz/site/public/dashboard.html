@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="js/sessao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body onload="buscarDados()">
@@ -68,6 +69,11 @@
                     <span>Fãs de Blindspot cadastrados</span><br>
                     <span id="id_usersCadastrados">0</span>
                 </div>
+            </div>
+            <br><br>
+            <div class="container-graficos">
+                <canvas id="chartTemporadas"></canvas>
+                <canvas id="chartPersonagens"></canvas>
             </div>
         </div>
 

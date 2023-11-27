@@ -24,3 +24,15 @@
     8px 12px 12px rgba(0, 0, 0, .15), 
     8px 14px 14px rgba(255, 255, 255, 0.173);
 }
+
+.container-graficos{
+    height:40vh; 
+    width:80vw;
+    display: flex;
+    gap: 40px;
+}
+
+/* .container-graficos canvas{
+    height:40vh; 
+    width:80vw;
+} */
