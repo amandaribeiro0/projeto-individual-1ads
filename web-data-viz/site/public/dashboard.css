@@ -12,6 +12,7 @@
 
 .card-kpi{
     background-color: #2d5651d0;
+    backdrop-filter: blur(15px);
     border-radius: 25px;
     text-align: center;
     padding: 10px;

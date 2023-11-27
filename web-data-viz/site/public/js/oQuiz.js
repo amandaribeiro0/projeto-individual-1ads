@@ -106,7 +106,7 @@ const perguntasBlindspot = [
 
   function mostrarResultadoFinal() {
     const containerQuiz = document.getElementById('quiz-container');
-    containerQuiz.innerHTML = `<p class="result">Você terminou o quiz! Sua pontuação final: ${pontuacao} de ${perguntasBlindspot.length}</p>`;
+    containerQuiz.innerHTML = `<h2 class="result">Você terminou o quiz! Sua pontuação final: ${pontuacao} de ${perguntasBlindspot.length}</h2>`;
   }
 
   

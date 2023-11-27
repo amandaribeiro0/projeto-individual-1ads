@@ -35,10 +35,30 @@
     cursor: pointer;
 }
 
+.container-form{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 75vw;
+  background: linear-gradient(to right, #243C39, #335753);
+  height: 95vh;
+  margin-top: 3vh;
+  padding: 0 30px;
+  border-radius: 25px;
+  box-shadow:
+  0 8px  8px  rgba(0, 0, 0, 0.478), 
+  0 16px 16px rgba(64, 64, 64, 0.1), 
+  8px 12px 12px rgba(0, 0, 0, .15), 
+  8px 14px 14px rgba(255, 255, 255, 0.173);
+}
+
+
 .formulario{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -51,3 +71,4 @@
     text-align: start;
     padding: 8px;
 }
+

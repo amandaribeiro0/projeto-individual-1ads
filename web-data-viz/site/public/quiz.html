@@ -23,6 +23,11 @@
                 </lord-icon>
                 HOME</a>
 
+            <a href="dashboard.html" class="botao-sidebar">
+                <lord-icon src="https://cdn.lordicon.com/uwinmnkh.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:20px;height:20px">
+                </lord-icon> DASHBOARD </a>
+                
             <a href="quiz.html" class="botao-sidebar">
                 <lord-icon src="https://cdn.lordicon.com/ojnjgkun.json" trigger="hover" colors="primary:#ffffff"
                     style="width:20px;height:20px">
@@ -40,19 +45,20 @@
             </button>
         </div>
 
-        <div>
+        <div class="container-quiz">
             <div>
-                <h1>Olá! <br> Responda nosso formulario para sabermos um pouco mais sobre você</h1>
+                <h1>Olá!Responda esse quiz pra testar seus conhecimentos sobre Blindspot</h1><br><br><br>
                 <div id="quiz-container">
                     <div class="question" id="pergunta"></div>
                     <div class="options" id="opcoes"></div>
-                    <button onclick="verificarResposta()">Enviar</button>
-                    <p class="result" id="resultado"></p>
+                    <br>
+                    <button class="botao-sidebar" onclick="verificarResposta()">Enviar</button>
+                    <h2 class="result" id="resultado"></h2>
                 </div>
             </div>
         </div>
 
-        
+
 
     </div>
 </body>
@@ -60,4 +66,3 @@
 </html>
 
 <script src="js/oQuiz.js"></script>
-
