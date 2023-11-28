@@ -119,7 +119,10 @@ const perguntasBlindspot = [
     var idUsuario = sessionStorage.ID_USUARIO;
 
     if (idUsuario == undefined) {
-      alert(`É necessario fazer login`)
+      alert(`É necessario fazer login para cadastrar seu quiz`)
+      setTimeout(function () {
+        window.location = "login.html";
+      }, 800);
     }
     if (
       pontuacaoFinal == ""

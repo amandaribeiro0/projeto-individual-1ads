@@ -149,7 +149,9 @@ function plotarGrafico(){
             temporada3.qtdTemporada, 
             temporada4.qtdTemporada,
             temporada5.qtdTemporada],
-        borderWidth: 1
+        borderWidth: 1,
+        borderColor: 'white',
+        backgroundColor: '#2d5651d0',
       }]
     },
     options: {
@@ -157,7 +159,17 @@ function plotarGrafico(){
         y: {
           beginAtZero: true
         }
-      }
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Temporada favorita dos usuarios',
+            font: {
+                size: 24
+            },
+            color: 'white'
+        }
+    }
     }
   });
 
@@ -184,7 +196,9 @@ function plotarGrafico(){
             personagem6.qtdPersonagem,
             personagem7.qtdPersonagem,
             personagem8.qtdPersonagem],
-        borderWidth: 1
+        borderWidth: 1,
+        borderColor: 'white',
+        backgroundColor: '#2d5651d0',
       }]
     },
     options: {
@@ -192,7 +206,18 @@ function plotarGrafico(){
         y: {
           beginAtZero: true
         }
-      }
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Personagens favoritos dos usuarios',
+            font: {
+                size: 24
+            },
+            color: 'white'
+        }
+    }
+      
     }
   });
 
