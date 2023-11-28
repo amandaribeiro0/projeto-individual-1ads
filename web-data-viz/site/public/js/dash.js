@@ -1,6 +1,14 @@
 var notaMedia = document.getElementById("id_notaMedia")
 var mediaQuiz = document.getElementById("id_mediaQuiz")
-var usersCadastrados = document.getElementById("id_usersCadastrados")
+var usersCadastrados = document.getElementById("id_usersCadastrados");
+
+var nomeUser = sessionStorage.NOME_USUARIO;
+
+if(nomeUser == undefined){
+    nomeUser = 'usuario'
+}
+
+nomeUsuario.innerHTML = nomeUser;
 
 var personagem1 = 0
 var personagem2 = 0
@@ -143,7 +151,7 @@ function plotarGrafico(){
         temporada4.temporadaFav, 
         temporada5.temporadaFav],
       datasets: [{
-        label: '# of Votes',
+        label: 'Quantidade de votos',
         data: [temporada1.qtdTemporada, 
             temporada2.qtdTemporada, 
             temporada3.qtdTemporada, 
@@ -168,6 +176,9 @@ function plotarGrafico(){
                 size: 24
             },
             color: 'white'
+        },
+        legend: {
+            display:false,
         }
     }
     }
@@ -187,7 +198,7 @@ function plotarGrafico(){
         personagem7.personagemFav,
         personagem8.personagemFav],
       datasets: [{
-        label: '# of Votes',
+        label: 'Quantidade de votos',
         data: [personagem1.qtdPersonagem,
             personagem2.qtdPersonagem, 
             personagem3.qtdPersonagem, 
@@ -215,6 +226,9 @@ function plotarGrafico(){
                 size: 24
             },
             color: 'white'
+        },
+        legend: {
+            display:false,
         }
     }
       

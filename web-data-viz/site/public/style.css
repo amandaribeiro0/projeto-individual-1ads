@@ -117,7 +117,6 @@ body{
     border: none;
     box-shadow:0px 5px  white;
 }
-.bota-home
 
 
 hr{
@@ -150,6 +149,27 @@ hr{
     color: white;
  }
 
+.container-temporada{
+    display: flex;
+    gap: 15px;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+ 
+ .box-temporada{
+    background: linear-gradient(to bottom, #243C39, #335753);
+    width: 40%;
+    padding: 15px;
+    /* background-color: #243C39; */
+    border-radius: 25px;
+    text-align: center;
+    box-shadow:
+    0 8px  8px  rgba(0, 0, 0, 0.478), 
+    0 16px 16px rgba(64, 64, 64, 0.1), 
+    8px 12px 12px rgba(0, 0, 0, .15), 
+    8px 14px 14px rgba(255, 255, 255, 0.173);
+ }
+
  .botao-sobre{
     background-color: #243C39;
     color: white;
@@ -164,12 +184,19 @@ hr{
     display: flex;
     text-align: center;
     text-decoration: none;
+    padding: 5px;
 }
 
 
 #videoTrailer{
     margin: 0 auto;
     display: flex;
+    border: 5px solid #243C39;
+    box-shadow:
+    0 8px  8px  rgba(0, 0, 0, 0.478), 
+    0 16px 16px rgba(64, 64, 64, 0.1), 
+    8px 12px 12px rgba(0, 0, 0, .15), 
+    8px 14px 14px rgba(255, 255, 255, 0.173);
 }
 .sobreMim{
     display: flex;
