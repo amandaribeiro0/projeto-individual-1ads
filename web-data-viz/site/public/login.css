@@ -1,74 +1,70 @@
-/* Configurações gerais para o corpo da página */
+
 body {
   margin: 0; /* Remove as margens padrão */
   padding: 0; /* Remove o preenchimento padrão */
-  display: flex; /* Usa o modelo de layout flexível */
-  justify-content: center; /* Centraliza horizontalmente */
+  display: flex; 
+  justify-content: center; 
   /* gap: 50px; */
-  align-items: center; /* Centraliza verticalmente */
-  min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
- 
-  /* background: linear-gradient(to bottom, #181818, #393939, rgb(90, 82, 82)); Cria um fundo gradiente */
+  align-items: center; 
+  min-height: 100vh; 
+   /* background: linear-gradient(to bottom, #181818, #393939, rgb(90, 82, 82)); */
   background: linear-gradient(rgba(85, 85, 85, 0.467) 5%, #2f2f2f  95%), url('assets/images/fundo-login.jpeg');
 }
-/* 
 
-/* Estilos para a div principal que envolve todo o conteúdo */
 .main {
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(500px); 
-  width: 25vw; /* Largura da div principal */
-  height: 520px; /* Altura da div principal */
-  background: rgba(53, 89, 85, 0.477); /* Cor de fundo da div principal */
+  width: 25vw;
+  height: 520px; 
+  background: rgba(53, 89, 85, 0.477); 
   align-items: center;
   justify-content: center;
-  border-radius: 10px; /* Borda arredondada */
+  border-radius: 10px; 
   box-shadow: 5px 30px 60px #000; /* Sombra da caixa*/
 }
 
 
-/* Estilos para rótulos (labels) */
+
 h1 {
   text-align: center;
-  color: #fff; /* Cor do texto branco */
-  font-size: 3.3em; /* Tamanho da fonte */
-  justify-content: center; /* Centraliza horizontalmente */
-  font-weight: bold; /* Texto em negrito */
+  color: #fff; 
+  font-size: 3.3em; 
+  justify-content: center; 
+  font-weight: bold; 
   cursor: pointer; /* Mostra o cursor ao passar por cima */
 
 }
 
-/* Estilos para campos de entrada */
+
 input {
-  width: 80%; /* Largura do campo de entrada */
-  height: 30px; /* Altura do campo de entrada */
-  background: #e0dede; /* Cor de fundo do campo de entrada */
-  justify-content: center; /* Centraliza horizontalmente */
-  display: flex; /* Usa o modelo de layout flexível */
-  margin: 20px auto; /* Margem interna superior e inferior, centraliza verticalmente */
-  padding: 15px; /* Preenchimento interno */
+  width: 80%; 
+  height: 30px; 
+  background: #e0dede; 
+  justify-content: center; 
+  display: flex; 
+  margin: 20px auto; 
+  padding: 15px; 
   border: none; /* Remove a borda */
   outline: none; /* Remove a borda do foco */
-  border-radius: 10px; /* Borda arredondada */
+  border-radius: 10px; 
 }
 
-/* Estilos para botões */
 button {
-  width: 60%; /* Largura do botão */
-  height: 40px; /* Altura do botão */
-  margin: 10px auto; /* Margem interna superior e inferior, centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  display: block; /* Exibe como bloco */
-  color: #fff; /* Cor do texto branco */
-  background: #243C39; /* Cor de fundo do botão */
-  font-size: 1.5em; /* Tamanho da fonte */
-  font-weight: bold; /* Texto em negrito */
-  margin-top: 20px; /* Margem superior */
-  outline: none; /* Remove a borda do foco */
-  border: none; /* Remove a borda */
-  border-radius: 5px; /* Borda arredondada */
-  transition: .2s ease-in; /* Efeito de transição suave */
+  width: 60%; 
+  height: 40px; 
+  margin: 10px auto; 
+  justify-content: center;
+  display: block; 
+  color: #fff; 
+  background: #243C39; 
+  font-size: 1.5em; 
+  font-weight: bold; 
+  margin-top: 20px; 
+  outline: none; 
+  border: none; 
+  border-radius: 5px; 
+  transition: .2s ease-in; 
   cursor: pointer; /* Mostra o cursor ao passar por cima */
 }
 

@@ -60,8 +60,8 @@
     </div>
 
     <div class="container-sobre " id="id_sobre">
-        <h1>SOBRE A SÉRIE</h1>
-        <p class="headline">"Blindspot" é uma série de televisão repleta de ação, mistério e reviravoltas que cativou
+        <h1 class="reveal">SOBRE A SÉRIE</h1>
+        <p class="headline reveal">"Blindspot" é uma série de televisão repleta de ação, mistério e reviravoltas que cativou
             audiências em todo
             o mundo. A trama gira em torno de uma mulher misteriosa chamada Jane Doe, que é encontrada em plena Times
             Square, coberta de tatuagens intricadas e sem nenhuma memória de seu passado. Cada tatuagem em seu corpo
@@ -88,7 +88,7 @@
             personagens e das tramas. <br>
             Conheça um pouco de cada temporada:
             <br> <br>
-        <div class="container-temporada">
+        <div  class="container-temporada reveal">
             <div class="box-temporada">
                 <h3>Temporada 1</h3>
                 A primeira temporada introduz Jane Doe, uma mulher misteriosa coberta de tatuagens que é encontrada em
@@ -112,7 +112,7 @@
             </div>
         </div>
         <br><br>
-        <div class="container-temporada">
+        <div class="container-temporada reveal">
             <div class="box-temporada">
                 <h3>Temporada 3</h3>
                 A terceira temporada continua a saga de Jane e sua equipe, enquanto enfrentam conspirações, traições e
@@ -140,14 +140,14 @@
 
         </p>
         <br><br>
-        <a href="personagens.html" class="botao-sobre">Conheça os principais personagens</a>
+        <a href="personagens.html" class="botao-sobre reveal">Conheça os principais personagens</a>
         <h3>Assista o trailer: </h3><br>
-        <iframe id="videoTrailer" width="460" height="215"
+        <iframe id="videoTrailer" class="reveal" width="460" height="215"
             src="https://www.youtube.com/embed/RqZkit-aCTo?si=S5JbUJTPvzBFOC5O" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-            <br><br>
+        <br><br>
 
     </div>
 
@@ -155,7 +155,7 @@
 
     <hr>
 
-    <div class="footer" id="contato">
+    <div  class="footer" id="contato">
         <div>
             <a href="https://github.com/amandaribeiro1" target="_blank"> <i id="icons-sobre"
                     class="fa-brands fa-github fa-xl" style="color: white;"></i></a>
@@ -171,3 +171,14 @@
 </html>
 
 <script src="js/script.js"></script>
+
+<script>
+      // Efeitos de scroll
+      ScrollReveal().reveal('.reveal', {
+        distance: '200px',
+        opacity: 0,
+        interval: 200,
+        duration: 1200,
+        reset: true
+    })
+</script>
