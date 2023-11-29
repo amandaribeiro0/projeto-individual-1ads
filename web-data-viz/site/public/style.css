@@ -187,6 +187,9 @@ hr{
     padding: 5px;
 }
 
+#id_sobreMim{
+    display: none;
+}
 
 #videoTrailer{
     margin: 0 auto;

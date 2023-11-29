@@ -151,10 +151,10 @@ const perguntasBlindspot = [
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-
-          setTimeout(function () {
-            window.location = "index.html";
-          }, 1000);
+            console.log('Quiz cadastrado com sucesso')
+          // setTimeout(function () {
+          //   window.location = "index.html";
+          // }, 1000);
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
